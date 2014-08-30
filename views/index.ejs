@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel="shortcut icon" href="/images/Bitcoin.ico" />
+    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+  	<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <link href="/stylesheets/flat-ui.css" rel="stylesheet">
+    <link href="//cdn.jsdelivr.net/flat-ui/2.0/fonts/Flat-UI-Icons.dev.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+    <center>
+        <a href="/" ><img src="/images/Bitcoin.png"></a>    
+        <h1><%= title %></h1><p><%= phrase %></p></center>
+    <script type="text/javascript" src="/javascripts/address.js"></script>
+    <!--<script type="text/javascript" src="/javascripts/transactions.js"></script>-->
+    <center>
+        <input type="text" name="WalletAddress" size="60"></input>
+        <button id="search" class="btn btn-block btn-lg btn-primary">Find!</button>
+        <br />
+        <br />
+        <table class="table">
+            <thead>
+                <tr>  
+                    <th id="Address"></th>
+                    <th id="Sent"></th>
+                    <th id="Received"></th>
+                    <th id="Balance"></th>
+                    <th id="Uncomfirmed"></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td id="btcAddress"></td>
+                    <td id="sent"></td>
+                    <td id="received"></td>
+                    <td id="balance"></td>
+                    <td id="uncomfirm"></td>
+                </tr>
+            </tbody>
+        </table>
+        <br />
+        <br />
+        <table class="table">
+            <thead>
+                <tr>
+                    <td id="TransactionsHash"></td>
+                    <td id="Confirmation"></td>
+                    <td id="Value"></td>
+                    <td id="Fees"></td>
+                    <td id="BlockTime"></td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th id="hash"></th>
+                    <th id="confirm"></th>
+                    <th id="amount"></th>
+                    <th id="fees"></th>
+                    <th id="time"></th>
+                </tr>
+            </tbody>
+        </table>
+        </table>
+    </center>
+</body>
+</html>
