@@ -10,11 +10,11 @@ $(document).ready(function() {
             },
             success: function(data) {
 
-                $('#TransactionsHash').append('<h3>Transaction Hash</h3>');
-                $('#Confirmation').append('<h3>Confirmation</h3>');
-                $('#Value').append('<h3>Value</h3>');
-                $('#Fees').append('<h3>Fees</h3>');
-                $('#BlockTime').append('<h3>Date</h3>');
+                $('#TransactionsHash').append('Transaction Hash:');
+                $('#Confirmation').append('Confirmations');
+                $('#Value').append('Value:');
+                $('#Fees').append('Fees:');
+                $('#BlockTime').append('Date:');
 
                 for (var i = 0; i <= data.length; i++) {
                     var output = data[i];

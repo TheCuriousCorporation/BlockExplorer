@@ -23,7 +23,7 @@ $(document).ready(function(){ // Enable jQuery.
         		        $('#Address').append('Address:');
         		        $('#Sent').append('Sent:');
         		        $('#Received').append('Received:');
-        		        $('#Balance').append('Balance:');
+        		        $('#Balance').append('Balance');
         		        $('#Uncomfirmed').append('Uncomfirmed:');
 
         		        $('#btcAddress').append(BTChash);
