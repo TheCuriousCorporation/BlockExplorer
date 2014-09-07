@@ -20,49 +20,31 @@
         <button id="search" class="btn btn-block btn-lg btn-primary">Find!</button>
         <br />
         <br />
-        <table class="table">
-            <thead>
-                <tr>  
-                    <th id="Address"></th>
-                    <th id="Sent"></th>
-                    <th id="Received"></th>
-                    <th id="Balance"></th>
-                    <th id="Uncomfirmed"></th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td id="btcAddress"></td>
-                    <td id="sent"></td>
-                    <td id="received"></td>
-                    <td id="balance"></td>
-                    <td id="uncomfirm"></td>
-                </tr>
-            </tbody>
-        </table>
-        <br />
-        <br />
-        <table class="table">
-            <thead>
-                <tr>
-                    <td id="TransactionsHash"></td>
-                    <td id="Confirmation"></td>
-                    <td id="Value"></td>
-                    <td id="Fees"></td>
-                    <td id="BlockTime"></td>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <th id="hash"></th>
-                    <th id="confirm"></th>
-                    <th id="amount"></th>
-                    <th id="fees"></th>
-                    <th id="time"></th>
-                </tr>
-            </tbody>
-        </table>
-        </table>
-    </center>
+        <div class="row">
+            <div class="col-md-7">
+                <table class="table table-rounded ">
+                    <tbody>
+                        <tr>
+                            <td class="no-wrap" id="Address"></td>
+                            <td class="expand-column" id="btcAddress"></td>
+                        </tr>
+                        <tr>
+                            <td class="no-wrap" id="Sent"></td>
+                            <td class="expand-column" id="sent"></td>
+                        </tr>
+                        <tr>
+                            <td class="no-wrap" id="Received"></td>
+                            <td class="expand-column" id="received"></td>
+                        </tr>
+                        <tr>
+                            <td class="no-wrap" id="Balance"></td>
+                            <td class="expand-column" id="balance"></td>
+                        </tr>
+                        <tr>
+                            <td class="no-wrap" id="Uncomfirmed"></td>
+                            <td class="expand-column" id="uncomfirm"></td>
+                        </tr>
+                    </tbody>
+                </table>
 </body>
 </html>

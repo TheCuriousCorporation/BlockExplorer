@@ -20,16 +20,16 @@ $(document).ready(function(){ // Enable jQuery.
         			        $('#uncomfirm').append(BTCuncomfirmed);
         		        }
 
-        		        $('#Address').append('<h3>Address</h3>');
-        		        $('#Sent').append('<h3>Sent</h3>');
-        		        $('#Received').append('<h3>Received</h3>');
-        		        $('#Balance').append('<h3>Balance</h3>');
-        		        $('#Uncomfirmed').append('<h3>Uncomfirmed</h3>');
+        		        $('#Address').append('Address:');
+        		        $('#Sent').append('Sent:');
+        		        $('#Received').append('Received:');
+        		        $('#Balance').append('Balance:');
+        		        $('#Uncomfirmed').append('Uncomfirmed:');
 
         		        $('#btcAddress').append(BTChash);
-        		        $('#balance').append("<img src='/images/BitMoney.png' /> " + BTCBalance);
-        		        $('#sent').append("<img src='/images/BitMoney.png' /> " + BTCSent);
-        		        $('#received').append("<img src='/images/BitMoney.png' /> " + BTCReceived);
+        		        $('#balance').append(BTCBalance + " BTC");
+        		        $('#sent').append(BTCSent + " BTC");
+        		        $('#received').append(BTCReceived + " BTC");
 
 			},
 			error: function(req, msg, err) {
