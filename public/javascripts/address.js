@@ -27,7 +27,7 @@ $(document).ready(function(){ // Enable jQuery.
         		        $('#Uncomfirmed').append('Uncomfirmed:');
 
         		        $('#btcAddress').append(BTChash);
-        		        $('#balance').append(BTCBalance + " BTC");
+        		        $('#balance').append(BTCBalance + " BTC" + "<br /><hr>");
         		        $('#sent').append(BTCSent + " BTC");
         		        $('#received').append(BTCReceived + " BTC");
 

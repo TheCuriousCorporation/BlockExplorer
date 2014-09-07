@@ -10,25 +10,24 @@ $(document).ready(function() {
             },
             success: function(data) {
 
+                var output = data[0];
+
+                var bitcoinHash = output.hash;
+                var confirmations = output.confirmations;
+                var amount = output.amount / 100000000.00;
+                var fees = output.fees / 100000000.00;
+
                 $('#TransactionsHash').append('Transaction Hash:');
                 $('#Confirmation').append('Confirmations');
                 $('#Value').append('Value:');
                 $('#Fees').append('Fees:');
                 $('#BlockTime').append('Date:');
-
-                for (var i = 0; i <= data.length; i++) {
-                    var output = data[i];
-                    var time = output.block_time + '<br />';
-                    var bitcoinHash = output.hash + '<br />';
-                    var confirmations = output.confirmations + '<br />';
-                    var amount = output.amount / 100000000.00 + '<br />';
-                    var fees = output.fees / 100000000.00 + '<br />';
                     
-                    $('#time').append(time);
-                    $('#hash').append(bitcoinHash);
-                    $('#confirm').append(confirmations);
-                    $('#amount').append("<img src='/images/BitSmall.png' /> " + amount);
-                    $('#fees').append("<img src='/images/BitSmall.png' /> " + fees);
+                $('#time').append(time);
+                $('#hash').append(bitcoinHash);
+                $('#confirm').append(confirmations);
+                $('#amount').append("<img src='/images/BitSmall.png' /> " + amount);
+                $('#fees').append("<img src='/images/BitSmall.png' /> " + fees);
                 }
 
             },
