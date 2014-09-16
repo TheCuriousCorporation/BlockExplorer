@@ -8,7 +8,14 @@ $(document).ready(function() {
 				xhr.setRequestHeader ('Authorization', 'Basic '+btoa('05e17b4bd6bf6ecd3df2947c027ce523'));
 			},
 			success: function(data) {
-				var value = data.value;
+				var value = data.value / 100000000.0;
+
+				if (value > 0) {
+					$('#ValueUnspent').append('Amount Unspent: ');
+					$('#valueunspent').append(value);
+				} else {
+					return null;
+				}
 			},
 			error: function(req, msg, err) {
 				console.log(err)
