@@ -6,6 +6,6 @@
 exports.index = function(req, res){
   res.render('index',{
   	title: 'Blockbit',
-  	phrase: 'Find any transaction for any Bitcoin on the Blockchain'
+  	phrase: 'Find any Bitcoin transaction on the Blockchain'
   });
 };

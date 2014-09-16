@@ -1,3 +1,6 @@
+/* This is the basic jQuery that calls the Chain API and pulls back the data. This script is specific to just the address and will
+only call back "address", "sent", "received", "balance", and "uncomfirmed". 
+*/
 $(document).ready(function(){ // Enable jQuery.
 	$('#search').click(function(){ // Enable the "click" function. Once the Button is clicked, the API is called.
 		var addr = $('input[name=WalletAddress]').val(); // Assigning the variable "addr" to whatever address value is put in the input box.
@@ -9,7 +12,7 @@ $(document).ready(function(){ // Enable jQuery.
 			},
 			success: function(data) { // If the API call is successfull, it assigns the JSON to this function.
                                 var BTChash = data.hash.toUpperCase();
-                                var BTCBalance = data.balance / 100000000.0;
+                                var BTCBalance = data.balance / 100000000.0; 
         		        var BTCSent = data.sent / 100000000.0;
         		        var BTCReceived = data.received / 100000000.0;
         		        var BTCuncomfirmed = data.unconfirmed_balance / 100000000.0;
