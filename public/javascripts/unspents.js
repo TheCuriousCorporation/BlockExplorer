@@ -16,6 +16,8 @@ $(document).ready(function() {
 				} else {
 					return null;
 				}
+				// Will this code work as a cleaner re-write?
+				//if (value > 0 ? $('#ValueUnspent').append('Amount Unspent: '); $('#valueunspent').append(value); : return null);
 			},
 			error: function(req, msg, err) {
 				console.log(err)
