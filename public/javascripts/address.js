@@ -1,5 +1,12 @@
 /* This is the basic jQuery that calls the Chain API and pulls back the data. This script is specific to just the address and will
 only call back "address", "sent", "received", "balance", and "uncomfirmed". 
+
+ ____  _            _     ____  _                      ___ ___  
+ | __ )| | ___   ___| | __/ ___|| |__   __ _ _ __ ___  |_ _/ _ \ 
+ |  _ \| |/ _ \ / __| |/ /\___ \| '_ \ / _` | '__/ _ \  | | | | |
+ | |_) | | (_) | (__|   <  ___) | | | | (_| | | |  __/_ | | |_| |
+ |____/|_|\___/ \___|_|\_\|____/|_| |_|\__,_|_|  \___(_)___\___/ 
+
 */
 $(document).ready(function(){ // Enable jQuery.
 	$('#search').click(function(){ // Enable the "click" function. Once the Button is clicked, the API is called.

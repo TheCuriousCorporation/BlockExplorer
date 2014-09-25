@@ -1,3 +1,10 @@
+/*
+ ____  _            _     ____  _                      ___ ___  
+ | __ )| | ___   ___| | __/ ___|| |__   __ _ _ __ ___  |_ _/ _ \ 
+ |  _ \| |/ _ \ / __| |/ /\___ \| '_ \ / _` | '__/ _ \  | | | | |
+ | |_) | | (_) | (__|   <  ___) | | | | (_| | | |  __/_ | | |_| |
+ |____/|_|\___/ \___|_|\_\|____/|_| |_|\__,_|_|  \___(_)___\___/ 
+*/
 $(document).ready(function(){ // Enable jQuery.
     $('#search').click(function(){ // Enable the "click" function. Once the Button is clicked, the API is called.
         var addr = $('input[name=WalletAddress]').val(); // Assigning the variable "addr" to whatever address value is put in the input box.
