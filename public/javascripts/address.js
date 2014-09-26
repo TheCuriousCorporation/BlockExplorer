@@ -1,15 +1,13 @@
-/* This is the basic jQuery that calls the Chain API and pulls back the data. This script is specific to just the address and will
-only call back "address", "sent", "received", "balance", and "uncomfirmed". 
-
- ____  _            _     ____  _                      ___ ___  
- | __ )| | ___   ___| | __/ ___|| |__   __ _ _ __ ___  |_ _/ _ \ 
- |  _ \| |/ _ \ / __| |/ /\___ \| '_ \ / _` | '__/ _ \  | | | | |
- | |_) | | (_) | (__|   <  ___) | | | | (_| | | |  __/_ | | |_| |
- |____/|_|\___/ \___|_|\_\|____/|_| |_|\__,_|_|  \___(_)___\___/ 
+/* 
+____  _            _    ____  _ _     ____ ___  
+ | __ )| | ___   ___| | _| __ )(_) |_  / ___/ _ \ 
+ |  _ \| |/ _ \ / __| |/ /  _ \| | __|| |  | | | |
+ | |_) | | (_) | (__|   <| |_) | | |_ | |__| |_| |
+ |____/|_|\___/ \___|_|\_\____/|_|\__(_)____\___/ 
 
 */
 $(document).ready(function(){ // Enable jQuery.
-	$('#search').click(function(){ // Enable the "click" function. Once the Button is clicked, the API is called.
+        $('#search').click(function(){ // Enable the "click" function. Once the Button is clicked, the API is called.
 		var addr = $('input[name=WalletAddress]').val(); // Assigning the variable "addr" to whatever address value is put in the input box.
 		$.ajax({
 			url: 'https://api.chain.com/v1/bitcoin/addresses/' + addr, // Chain API URL.
