@@ -4,7 +4,7 @@ ____  _            _    ____  _ _     ____ ___
  |  _ \| |/ _ \ / __| |/ /  _ \| | __|| |  | | | |
  | |_) | | (_) | (__|   <| |_) | | |_ | |__| |_| |
  |____/|_|\___/ \___|_|\_\____/|_|\__(_)____\___/ 
- 
+
 */
 $(document).ready(function(){ // Enable jQuery.
     $('#search').click(function(){ // Enable the "click" function. Once the Button is clicked, the API is called.
@@ -28,6 +28,7 @@ $(document).ready(function(){ // Enable jQuery.
 
             var outputs = output.outputs[0];
             var output_value = outputs.value / 100000000.0;
+            var addy = outputs.addresses[0];
 
             var fees = output.fees / 100000000.0;
             var amount = output.amount / 100000000.0;
@@ -51,6 +52,8 @@ $(document).ready(function(){ // Enable jQuery.
             $('#feesZero').append(fees);
             $('#AmountZero').append('Amount Sent: ');
             $('#amountZero').append(amount);
+            $('#Addy').append('Sent to: ')
+            $('#addy').append(addy);
 
 
           },
