@@ -34,7 +34,7 @@ $(document).ready(function(){
                                 if (BTCuncomfirmed <= 0) {
                                         $('#uncomfirm').append("No Uncomfirmed Coins");
                                 } else {
-                                        $('#uncomfirm').append(BTCuncomfirmed);
+                                        $('#uncomfirm').append(BTCuncomfirmed + " BTC");
                                 }
 
                                 $('#Address').append('Address:');
