@@ -43,15 +43,15 @@ $(document).ready(function(){ // Enable jQuery.
             $('#confirmZero').append(confirm_zero);
 
             $('#InputsValueZero').append('Input Value: ')
-            $('#inputsValueZero').append(input_value);
+            $('#inputsValueZero').append(input_value + " BTC");
 
             $('#OutputsValueZero').append('Output Value: ');
-            $('#outputsValueZero').append(output_value);
+            $('#outputsValueZero').append(output_value + " BTC");
 
             $('#FeesZero').append('Fees: ');
-            $('#feesZero').append(fees);
+            $('#feesZero').append(fees + " BTC");
             $('#AmountZero').append('Amount Sent: ');
-            $('#amountZero').append(amount);
+            $('#amountZero').append(amount + " BTC");
             $('#Addy').append('Sent to: ')
             $('#addy').append(addy);
 
