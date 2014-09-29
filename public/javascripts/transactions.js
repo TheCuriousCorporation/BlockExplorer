@@ -19,8 +19,8 @@ $(document).ready(function(){ // Enable jQuery.
           success: function(data) {
             var output = data[0];
 
-            var block_hash_zero = output.block_hash;
-            var block_height_zero = output.block_height;
+            var block_hash_zero = output.hash;
+            //var block_height_zero = output.block_height;
             var confirm_zero = output.confirmations;
 
             var inputs = output.inputs[0];
@@ -34,12 +34,12 @@ $(document).ready(function(){ // Enable jQuery.
             var amount = output.amount / 100000000.0;
 
 
-            $('#BlockZero').append('Block Hash:');
-            $('#HeightZero').append('Block Height: ');
+            $('#BlockZero').append('Hash:');
+            //$('#HeightZero').append('Block Height: ');
             $('#ConfirmZero').append('Confirmations:' );
 
             $('#blockZero').append(block_hash_zero);
-            $('#heightZero').append(block_height_zero);
+            //$('#heightZero').append(block_height_zero);
             $('#confirmZero').append(confirm_zero);
 
             $('#InputsValueZero').append('Input Value: ')
