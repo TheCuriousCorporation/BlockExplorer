@@ -31,7 +31,7 @@ $(document).ready(function(){
                             url: 'https://api.chain.com/v1/bitcoin/addresses/' + addr, // Chain API URL.
                             type: 'GET',
                             beforeSend: function(xhr) {
-                                    xhr.setRequestHeader ('Authorization', 'Basic '+btoa('05e17b4bd6bf6ecd3df2947c027ce523')); // Authorizing the API call.
+                                    xhr.setRequestHeader     // Authorizing the API call.
                             },
                             success: function(data) { // If the API call is successfull, it assigns the JSON to this function.
                                     var BTChash = data.hash.toUpperCase();
