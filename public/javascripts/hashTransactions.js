@@ -17,6 +17,7 @@ $(document).ready(function() {
 		xhr.setRequestHeader ('Authorization', 'Basic '+btoa('05e17b4bd6bf6ecd3df2947c027ce523'));
 	    },
 	    success: function(data) {
+		/*
 		var inputs = data[0];
 
 		var value = inputs.value / 100000000.0;
@@ -26,6 +27,7 @@ $(document).ready(function() {
 		$('#Value').append("Price: ");
 		$('#value').append(value);
 		$('#Address').append(address);
+		*/
 	    },
 	    error: function(req, msg, err) {
 		console.log(err);
