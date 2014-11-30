@@ -1,3 +1,11 @@
+<!--
+  ____  _            _     ____  _                      ___ ___  
+ | __ )| | ___   ___| | __/ ___|| |__   __ _ _ __ ___  |_ _/ _ \ 
+ |  _ \| |/ _ \ / __| |/ /\___ \| '_ \ / _` | '__/ _ \  | | | | |
+ | |_) | | (_) | (__|   <  ___) | | | | (_| | | |  __/_ | | |_| |
+ |____/|_|\___/ \___|_|\_\|____/|_| |_|\__,_|_|  \___(_)___\___/ 
+
+-->
 <!DOCTYPE html>
 <html>
   <head>
@@ -25,7 +33,7 @@
         <h1><%= title %></h1><p><%= phrase %></p></center>
     <script type="text/javascript" src="/javascripts/address.js"></script>
     <script type="text/javascript" src="/javascripts/transactions.js"></script>
-    <script type="text/javascript" src="/javascripts/hashTransactions.js"></script>
+   <!-- <script type="text/javascript" src="/javascripts/OP_RETURNS.js"></script> -->
     <center>
         <input type="text" name="WalletAddress" size="60"></input>
         <button id="search" class="btn btn-block btn-lg btn-primary">Find!</button>
@@ -60,6 +68,10 @@
                             <td class="expand-column" id="uncomfirm"></td>
                         </tr>
                         <tr>
+                            <td class="no-wrap" id="Text"></td>
+                            <td class="expand-column" id="text"></td>
+                        </tr>
+                        <tr>
                             <td class="no-wrap" id="BlockZero"></td>
                             <td class="expand-column" id="blockZero"></td>
                         </tr>
@@ -92,8 +104,8 @@
                             <td class="expand-column" id="addy"></td>
                         </tr>
                         <tr>
-                            <td class="no-wrap" id="Hash"></td>
-                            <td class="expand-column" id="hash"></td>
+                            <td class="no-wrap" id="Test"></td>
+                            <td class="expand-column" id="test"></td>
                         </tr>
                     </tbody>
                 </table>

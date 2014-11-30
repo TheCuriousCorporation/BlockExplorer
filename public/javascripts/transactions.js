@@ -53,6 +53,7 @@ $(document).ready(function(){ // Enable jQuery.
             $('#feesZero').append(fees + " BTC");
             $('#AmountZero').append('Amount Sent: ');
             $('#amountZero').append(amount + " BTC");
+
             $('#Addy').append('Sent to: ')
             $('#addy').append(addy);
 

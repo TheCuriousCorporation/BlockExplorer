@@ -5,7 +5,7 @@
 
 exports.index = function(req, res){
   res.render('index',{
-  	title: 'Blockbit',
+  	title: 'BlockShare.IO',
   	phrase: 'Find any Bitcoin transaction on the Blockchain'
   });
 };
