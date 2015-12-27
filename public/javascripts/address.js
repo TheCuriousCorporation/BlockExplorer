@@ -28,39 +28,45 @@ $(document).ready(function(){
                 });
                 $('#search').click(function() {
                     var addr = $('input[name=WalletAddress]').val(); // Assigning the variable "addr" to whatever address value is put in the input box.
-                    $.ajax({
-                            url: 'https://api.chain.com/v1/bitcoin/addresses/' + addr, // Chain API URL.
-                            type: 'GET',
-                            beforeSend: function(xhr) {
-                                    xhr.setRequestHeader ('Authorization', 'Basic '+btoa('<add API key>'));     // Authorizing the API call.
-                            },
-                            success: function(data) { // If the API call is successfull, it assigns the JSON to this function.
-                                    var BTChash = data.hash.toUpperCase();
-                                    var BTCBalance = data.balance / 100000000.0; 
-                                    var BTCSent = data.sent / 100000000.0;
-                                    var BTCReceived = data.received / 100000000.0;
-                                    var BTCuncomfirmed = data.unconfirmed_balance / 100000000.0;
+                    var url = 'https://bitcoin.toshi.io/api/v0/addresses/' + addr + '/transactions';
+                    $.getJSON(url, function(data) {
+                        var address = data.hash.toUpperCase();
+                        var BTCBalance = data.balance / 100000000.0;
+                        BTCBalance = BTCBalance.toFixed(4);
+                        var BTCSent = data.sent / 100000000.0;
+                        var BTCReceived = data.received / 100000000.0;
+                        BTCReceived = BTCReceived.toFixed(4);
+                        var BTCuncomfirmed = data.unconfirmed_balance / 100000000.0;
+                        var BTCHash = data.transactions[0].hash;
+                        var BTCsize = data.transactions[0].size;
+                        var BTCfees = data.transactions[0].fees / 100000000.0;
+                        var BTCAmtSent = data.transactions[0].inputs[0].amount / 100000000.0;
+                        var BTCSentAddr = data.transactions[0].inputs[0].addresses;
+                        var BTCTransHash = data.transactions[0].inputs[0].previous_transaction_hash;
 
-                                    if (BTCuncomfirmed <= 0) {
-                                            $('#uncomfirm').append("No Uncomfirmed Coins");
-                                    } else {
-                                            $('#uncomfirm').append(BTCuncomfirmed + " BTC");
-                                    }
+                        $('#Address').append('Address:');
+                        $('#Sent').append('Sent:');
+                        $('#Received').append('Received:');
+                        $('#Balance').append('Balance');
+                        $('#Uncomfirmed').append('Uncomfirmed:');
+                        $('#Hash').append('Hash:')
+                        $('#Size').append('Size:')
+                        $('#Fees').append('Fees:');
+                        $('#AmtSent').append('Amount Sent:');
+                        $('#SentAddr').append('Address:');
+                        $('#TransHash').append('Sent Hash: ');
 
-                                    $('#Address').append('Address:');
-                                    $('#Sent').append('Sent:');
-                                    $('#Received').append('Received:');
-                                    $('#Balance').append('Balance');
-                                    $('#Uncomfirmed').append('Uncomfirmed:');
+                        $('#btcAddress').append(address);
+                        $('#balance').append(BTCBalance + " BTC" + "<br />");
+                        $('#sent').append(BTCSent + " BTC");
+                        $('#received').append(BTCReceived + " BTC");
+                        $('#hash').append(BTCHash);
+                        $('#size').append(BTCsize);
+                        $('#fees').append(BTCfees + " BTC");
+                        $('#amtsent').append(BTCAmtSent + " BTC")
+                        $('#sentaddr').append(BTCSentAddr);
+                        $('#transhash').append(BTCTransHash);
+                    });
 
-                                    $('#btcAddress').append(BTChash);
-                                    $('#balance').append(BTCBalance + " BTC" + "<br />");
-                                    $('#sent').append(BTCSent + " BTC");
-                                    $('#received').append(BTCReceived + " BTC");
-                            },
-                            error: function(req, msg, err) {
-                                    console.log(err); // If it's broke, you had better fix it.
-                            }
-                });
         });
 });
